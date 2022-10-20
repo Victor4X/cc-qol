@@ -129,3 +129,16 @@ function getEmpty()
     end
     return -1
 end
+
+-- Returns the amount of empty slots
+-- ret1: int amount of empty slots
+function getNumEmpty()
+    num = 0
+    for slot=1,16 do
+        count = t.getItemCount(slot)
+        if (count == 0) then
+            num = num + 1 
+        end
+    end
+    return num
+end
